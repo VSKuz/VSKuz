@@ -1,5 +1,5 @@
 ### Hi there 👋
-
+My homework projects and all sorts of experiments will be here.
 <!--
 **VSKuz/VSKuz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
