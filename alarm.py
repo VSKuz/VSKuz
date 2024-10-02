@@ -13,7 +13,7 @@ def open_window():
     window.mainloop()
 
 def validate_time(alarm_time):
-    if len(alarm_time) !=8:
+    if len(alarm_time) !=5:
         return "wrong format"
     else:
         if int(alarm_time[0:2]) > 23:
