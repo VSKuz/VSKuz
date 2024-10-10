@@ -7,8 +7,8 @@ def quiz_qdb():
         },
         {
             'question': 'Какой тип данных используется для хранения целых чисел?',
-            'options': ['int', 'float', 'str', 'natural'],
-            'correct_option': 0
+            'options': ['natural', 'float', 'str', 'int'],
+            'correct_option': 3
         },
         {
             'question': 'Какой фреймворк используется для машинного обучения?',
@@ -17,7 +17,7 @@ def quiz_qdb():
         },
         {
             'question': 'Какой индекс будет у первого элемента в любом списке?',
-            'options': ['1', 'start', '0', 'одинаков с элементом'],
+            'options': ['1', 'start', '0', 'Одинаков с элементом'],
             'correct_option': 2
         },
         {
@@ -36,19 +36,19 @@ def quiz_qdb():
             'correct_option': 0
         },
         {
-            'question': '',
-            'options': ['', '', '', ''],
-            'correct_option': 1
+            'question': 'Почему при глубоком обучении используют GPU?',
+            'options': ['Чтоб не пылились после майнинга', 'Так проще', 'Для ускорения обучения', 'Чтобы потом в игры поиграть'],
+            'correct_option': 2
         },
         {
-            'question': '',
-            'options': ['', '', '', ''],
-            'correct_option': 1
+            'question': 'Что такое Pandas',
+            'options': ['Панды?', 'Игра', 'База данных', 'Библиотека для работы с данными'],
+            'correct_option': 3
         },
         {
-            'question': '',
-            'options': ['', '', '', ''],
-            'correct_option': 1
+            'question': 'Что такое фреймворк?',
+            'options': ['Набор библиотек и инструментов', 'Рабочая рамка', 'Специальная функция', 'Копия чужого кода'],
+            'correct_option': 0
         }
     ]
     return data
