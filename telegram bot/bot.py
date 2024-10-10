@@ -2,6 +2,7 @@
 import aiosqlite
 import asyncio
 import logging
+import quiz_questions
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
 from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
@@ -11,7 +12,7 @@ from aiogram import F
 logging.basicConfig(level=logging.INFO)
 
 # Замените "YOUR_BOT_TOKEN" на токен, который вы получили от BotFather
-API_TOKEN = 'YOUR_BOT_TOKEN'
+API_TOKEN = '7578624082:AAEOvBt_koYlfmrYQ99-NUyXBAD3Ip1XTf8'
 
 # Объект бота
 bot = Bot(token=API_TOKEN)
@@ -23,19 +24,7 @@ DB_NAME = 'quiz_bot.db'
 
 
 # Структура квиза
-quiz_data = [
-    {
-        'question': 'Что такое Python?',
-        'options': ['Язык программирования', 'Тип данных', 'Музыкальный инструмент', 'Змея на английском'],
-        'correct_option': 0
-    },
-    {
-        'question': 'Какой тип данных используется для хранения целых чисел?',
-        'options': ['int', 'float', 'str', 'natural'],
-        'correct_option': 0
-    },
-    # Добавьте другие вопросы
-]
+quiz_data = quiz_questions.quiz_qdb()
 
 
 
