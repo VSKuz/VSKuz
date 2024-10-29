@@ -11,8 +11,9 @@ from aiogram import F
 # Включаем логирование, чтобы не пропустить важные сообщения
 logging.basicConfig(level=logging.INFO)
 
+with open("token.txt") as tok:
 # Замените "YOUR_BOT_TOKEN" на токен, который вы получили от BotFather
-API_TOKEN = '7578624082:AAEOvBt_koYlfmrYQ99-NUyXBAD3Ip1XTf8'
+    API_TOKEN = tok.read()
 
 # Объект бота
 bot = Bot(token=API_TOKEN)
