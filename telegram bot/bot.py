@@ -3,6 +3,7 @@ import aiosqlite
 import asyncio
 import logging
 import quiz_questions
+from gen_opt_key import generate_options_keyboard
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
 from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
@@ -26,20 +27,6 @@ DB_NAME = 'quiz_bot.db'
 
 # Структура квиза
 quiz_data = quiz_questions.quiz_qdb()
-
-
-
-def generate_options_keyboard(answer_options, right_answer):
-    builder = InlineKeyboardBuilder()
-
-    for option in answer_options:
-        builder.add(types.InlineKeyboardButton(
-            text=option,
-            callback_data="right_answer" if option == right_answer else "wrong_answer")
-        )
-
-    builder.adjust(1)
-    return builder.as_markup()
 
 
 @dp.callback_query(F.data == "right_answer")
@@ -71,6 +58,7 @@ async def wrong_answer(callback: types.CallbackQuery):
         message_id=callback.message.message_id,
         reply_markup=None
     )
+
 
     # Получение текущего вопроса из словаря состояний пользователя
     current_question_index = await get_quiz_index(callback.from_user.id)
