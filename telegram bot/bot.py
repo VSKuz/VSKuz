@@ -6,7 +6,7 @@ import quiz_questions
 from gen_opt_key import generate_options_keyboard
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
-from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
+from aiogram.utils.keyboard import ReplyKeyboardBuilder
 from aiogram import F
 
 # Включаем логирование, чтобы не пропустить важные сообщения

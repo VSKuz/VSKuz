@@ -1,3 +1,5 @@
+from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
+
 def generate_options_keyboard(answer_options, right_answer):
     builder = InlineKeyboardBuilder()
 
