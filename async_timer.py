@@ -3,6 +3,7 @@
 #А всплывающее окно я не пропущу
 from tkinter import *
 import asyncio
+import winsound
 
 #Создаю окно
 def open_window():
@@ -29,6 +30,7 @@ async def display_message():
 #        print("Осталось", "%.0f" %input_time, "секунд")
         if (loop.time() + 1.0) >= end_time:
             print("Время вышло")
+            winsound.MessageBeep()
             open_window()
             break
         await asyncio.sleep(1)

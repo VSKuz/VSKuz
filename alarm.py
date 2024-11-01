@@ -1,5 +1,7 @@
 from datetime import *
 from tkinter import *
+import winsound
+
 #Создаю окно
 def open_window():
     window = Tk()
@@ -43,6 +45,7 @@ while True:
     if alarm_hour == current_hour:
         if alarm_min == current_min:
             print("Настало время!")
+            winsound.MessageBeep()
             #Тут будет код, на высвечивание окошка с текстом
             open_window()
             break
