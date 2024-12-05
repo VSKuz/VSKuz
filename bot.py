@@ -124,7 +124,7 @@ async def wrong_answer(callback: types.CallbackQuery):
         await get_question(callback.message, callback.from_user.id)
     else:
         await callback.message.answer("Это был последний вопрос. Квиз завершен!")
-        await callback.message.answer("Ваш результат: ", curent_question_result ,"из ", len(quiz_data))
+        await callback.message.answer("Ваш результат: ", curent_question_result ," из ", len(quiz_data))
 
 
 
