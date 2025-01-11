@@ -1,5 +1,8 @@
 ### Hi there 👋
-My homework projects and all sorts of experiments will be here.
+This is my Purchase-count-prediction-model.
+It's based on Customer Personality Analysis dataset, and
+predicts the number of purchases made, depending on income, number of family members, education, and the number of days 
+since the customer's last purchase.
 <!--
 **VSKuz/VSKuz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
