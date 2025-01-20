@@ -1,8 +1,9 @@
-from datetime import *
-from tkinter import *
+from datetime import datetime
+from tkinter import Tk, Button
 import winsound
+import time
 
-#Создаю окно
+#Создание окна
 def open_window():
     window = Tk()
     window.geometry("500x500")
@@ -14,6 +15,7 @@ def open_window():
     button.pack(pady = 50)
     window.mainloop()
 
+#Проверка правильности ввода времени
 def validate_time(alarm_time):
     if len(alarm_time) !=5:
         return "wrong format"
@@ -24,7 +26,8 @@ def validate_time(alarm_time):
             return "wrong format (min)"
         else:
             return "Done!"
-
+        
+#Задаю время будильника и проверяю корректность ввода
 while True:
     alarm_time = input("Введите время будильника в формате: \'HH:MM\' ")
     validate = validate_time(alarm_time)
@@ -37,15 +40,20 @@ while True:
 alarm_hour = int(alarm_time[0:2])
 alarm_min = int(alarm_time[3:5])
 
+#Проверка времени
 while True:
     now = datetime.now()
     current_hour = now.hour
     current_min = now.minute
 
-    if alarm_hour == current_hour:
-        if alarm_min == current_min:
-            print("Настало время!")
-            winsound.MessageBeep()
-            #Тут будет код, на высвечивание окошка с текстом
-            open_window()
-            break
+    if alarm_hour == current_hour and alarm_min == current_min:
+        print("Настало время!")
+        #Звуковое оповещение
+        winsound.MessageBeep()
+        #Высвечивание окошка с текстом
+        open_window()
+        break #Завершаем работу
+
+    #Программа кошмарит CPU, поэтому
+    #Замедляю проверку для экономии вычислительных ресурсов
+    time.sleep(0.5)
