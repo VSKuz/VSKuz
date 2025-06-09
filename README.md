@@ -1,15 +1,4 @@
-### Hi there 👋
-This is my Purchase-count-prediction-model.
-It's based on Customer Personality Analysis dataset, and
-predicts the number of purchases made, depending on income, number of family members, education, and the number of days 
-since the customer's last purchase.
-<!--
-**VSKuz/VSKuz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
+### Привет 👋
+Здесь хранятся различные ИИ модели, которые я создал во время своего обучения.
+Модели, которые созданы как пет-проекты, будут выведены в отдельные ветви.
+Представленные тут модели отражают мои знания по различным направлениям в ML и DL.
